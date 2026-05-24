@@ -229,7 +229,7 @@ def peer_median(peers_df, col):
 
 
 # ── Load client registry ───────────────────────────────────────────────────────
-REGISTRY_PATH = Path(__file__).parent.parent / "FMS_Client_FDIC_Certs.xlsx"
+REGISTRY_PATH = Path(__file__).parent / "FMS_Client_FDIC_Certs.xlsx"
 
 @st.cache_data(ttl=300)
 def load_registry():
