@@ -833,14 +833,14 @@ with tab_foot:
                 _zoom = 8
             else:
                 _zoom = 9
-            fig = px.scatter_mapbox(
+            fig = px.scatter_map(
                 loc, lat="LATITUDE", lon="LONGITUDE",
                 hover_name="label", hover_data={"LATITUDE": False, "LONGITUDE": False,
                                                  "COUNTY": True, "ZIP": True},
                 color_discrete_sequence=[C_NAVY],
                 zoom=_zoom, height=500,
             )
-            fig.update_layout(mapbox_style="open-street-map",
+            fig.update_layout(map_style="open-street-map",
                               margin=dict(t=0, b=0, l=0, r=0))
             st.plotly_chart(fig, use_container_width=True)
             st.caption(f"{len(loc)} branch locations")
